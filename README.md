@@ -1,10 +1,10 @@
-# Frontend Foundation — State Swap Demo 
+# Frontend Foundation — State Swap Demo
 
 This repository demonstrates how to use the `frontend-foundation` template to swap state management implementations without changing UI code.
 
 ## What this demo shows
 
-- UI components do not import redux or jotei
+- UI components do not import redux or jotai
 - Services depend on a stable state contract
 - State management implementation can be swapped
 - No UI or hook changes are required
@@ -14,7 +14,7 @@ This repository demonstrates how to use the `frontend-foundation` template to sw
 This demo has two implementations:
 
 - Redux-based adapter - `main-redux`
-- Jotai-based adapter - `main-jotei`
+- Jotai-based adapter - `main-jotai`
 
 Both implement the same Counter interface.
 

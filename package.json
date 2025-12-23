@@ -1,8 +1,8 @@
 {
-    "name": "frontend-foundation",
+    "name": "frontend-foundation-state-swap-demo",
     "version": "1.0.0",
     "private": false,
-    "description": "A production-grade, swap-safe Next.js frontend foundation",
+    "description": "Demonstrate state swapping (redux → jotai) with zero UI changes",
     "license": "MIT",
     "scripts": {
         "dev": "next dev",
