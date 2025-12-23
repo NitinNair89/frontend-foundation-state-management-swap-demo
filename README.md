@@ -1,47 +1,38 @@
-# Frontend Foundation
+# Frontend Foundation — State Swap Demo 
 
-A production-ready Next.js starter focused on architecture, swap-ability, and long-term maintainability.
+This repository demonstrates how to use the `frontend-foundation` template to swap state management implementations without changing UI code.
 
-This repository is intended to be used as a template for real projects.
+## What this demo shows
 
----
+- UI components do not import redux or jotei
+- Services depend on a stable state contract
+- State management implementation can be swapped
+- No UI or hook changes are required
 
-## What This Starter Solves
+## Swap Demonstrated
 
-- Prevents UI ↔ state coupling
-- Prevents UI ↔ transport coupling
-- Avoids opinionated tooling lock-in
-- Enables long-term evolution
+This demo has two implementations:
 
----
+- Redux-based adapter - `main-redux`
+- Jotai-based adapter - `main-jotei`
 
-## Tech Stack
+Both implement the same Counter interface.
 
-- Next.js (App Router)
-- TypeScript (strict)
-- Tailwind CSS (token-driven)
-- Minimal dependencies
-- Zero runtime assumptions
+## How Swap Works
 
-Linting, CMS, and state libraries are deliberately excluded.
+The swap is performed by replacing: `src/stores/counter.adapter.ts`
 
-All major systems are **replaceable by design**.
+No UI, hook, or domain logic changes are required.
 
----
+## Why This Matters
 
-## Documentation
+This mirrors real-world state evolution:
+Redux → Jotai → Signals → Something else
 
-- [Architecture](docs/architecture.md)
-- [Tailwind Architecture](docs/tailwind-architecture.md)
-- [State and Data](docs/state-and-data.md)
+Without rewriting the application.
 
-These explain the why, not just the how.
+This repo intentionally focuses on ONE concern:
+**State swap-ability**.
 
----
-
-## Who This Is For
-
-- Senior frontend engineers
-- Teams building long-lived products
-- Developers targeting global markets
-- Engineers who value architectural clarity
+Architecture details live in the template repo:
+[Frontend Foundation](https://github.com/NitinNair89/frontend-foundation)
