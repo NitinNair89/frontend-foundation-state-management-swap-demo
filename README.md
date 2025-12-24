@@ -1,6 +1,6 @@
 # Frontend Foundation — State Swap Demo
 
-This repository demonstrates how to use the `frontend-foundation` template to swap state management implementations without changing UI code.
+This repository demonstrates how to use the `frontend-foundation` template to swap state implementations and how the same UI and business logic can run on different state management engines without modification.
 
 ## What this demo shows
 
@@ -13,16 +13,13 @@ This repository demonstrates how to use the `frontend-foundation` template to sw
 
 This demo has two implementations:
 
-- Redux-based adapter - `main-redux`
-- Jotai-based adapter - `main-jotai`
+- `main-redux` — Redux Toolkit implementation
+- `main-jotai` — Jotai implementation
 
 Both implement the same Counter interface.
 
-## How Swap Works
-
-The swap is performed by replacing: `src/stores/counter.adapter.ts`
-
-No UI, hook, or domain logic changes are required.
+The UI code, hooks contract, and page logic are identical.
+Only the internal state adapter differs.
 
 ## Why This Matters
 
